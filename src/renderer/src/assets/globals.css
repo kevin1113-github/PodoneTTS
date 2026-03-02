@@ -1,0 +1,69 @@
+@import 'tailwindcss';
+
+:root {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+}
+
+@layer utilities {
+  .bg-background {
+    background-color: var(--background);
+  }
+
+  .text-foreground {
+    color: var(--foreground);
+  }
+
+  @keyframes overlay-bubble-in {
+    from {
+      transform: translateY(16px);
+      opacity: 0;
+    }
+
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .animate-overlay-bubble-in {
+    animation: overlay-bubble-in 220ms ease-out both;
+    will-change: transform, opacity;
+  }
+
+  @keyframes overlay-bubble-out {
+    from {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    to {
+      transform: translateY(16px);
+      opacity: 0;
+    }
+  }
+
+  .animate-overlay-bubble-out {
+    animation: overlay-bubble-out 220ms ease-in both;
+    will-change: transform, opacity;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+input[type='range'].slider-track::-webkit-slider-runnable-track {
+  height: 100%;
+  background: #4160a3;
+  color: #1f2e4e;
+  border-radius: 9999px;
+}
+
+input[type='range'].slider-track::-moz-range-track {
+  height: 100%;
+  background: #4160a3;
+  border-radius: 9999px;
+}
