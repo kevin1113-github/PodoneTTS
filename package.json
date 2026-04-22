@@ -1,6 +1,6 @@
 {
   "name": "podone-tts",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "스트리머 포도네의 방송을 도와 TTS 음성을 재생하는 프로그램입니다.",
   "main": "./out/main/index.js",
   "author": "kevin1113dev",

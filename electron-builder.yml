@@ -14,6 +14,7 @@ asarUnpack:
   - resources/**
 win:
   target: nsis
+  icon: "resources/icon.ico"
 nsis:
   artifactName: ${name}-${version}-setup.${ext}
   shortcutName: ${productName}
@@ -22,6 +23,8 @@ nsis:
   oneClick: false
   allowToChangeInstallationDirectory: true
   runAfterFinish: false
+  installerIcon: "resources/icon.ico" # 인스톨러 아이콘
+  uninstallerIcon: "resources/icon.ico" # 언인스톨러 아이콘
 mac:
   entitlementsInherit: build/entitlements.mac.plist
   extendInfo:
